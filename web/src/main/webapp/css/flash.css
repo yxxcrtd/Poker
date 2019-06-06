@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+.flash {
+	width: 1000px;
+	height: 686px;
+	background: url("../images/img_flash/bg.jpg") no-repeat scroll center
+		center transparent;
+	font-size: 12px;
+	line-height: 150%;
+}
+
+.box {
+	margin: 0 auto;
+	width: 1000px;
+	height: 686px;
+	position: relative;
+}
+
+.chessleft {
+	float: left;
+	width: 320px;
+	height: 620px;
+	margin: 50px 10px;
+}
+
+.player {
+	float: left;
+	width: 320px;
+	height: 160px;
+	margin-top: 20px;
+}
+
+.info-r {
+	float: left;
+	width: 130px;
+	height: 160px;
+	margin-left: 15px;
+}
+
+.info-b {
+	float: right;
+	width: 130px;
+	height: 160px;
+}
+
+.manuals {
+	width: 300px;
+	height: 380px;
+	float: left;
+	margin: 0 20px 20px 15px;
+}
+
+.canvas {
+	float: left;
+	width: 420px;
+	height: 600px;
+	text-align: center;
+	margin: 70px 0 0 15px;
+}
+
+/*
+.round {
+	float: left;
+	width: 80px;
+	height: 450px;
+	display: block border: 1px solid red;
+}*/
+/* 改变系统默认的下拉框样式 */
+.timer {
+	width: 101px;
+	border: 0;
+	text-align: center;
+	padding-left: 28px; /* 为下拉小箭头留出一点位置，避免被文字覆盖 */
+	appearance: none; /* 将默认的select选择框样式清除 */
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+	background: transparent url("../images/img_flash/chess_bt.png")
+		no-repeat fixed center top;
+	font-family: "微软雅黑";
+}
+
+.headicon {
+	width: 80px;
+	height: 80px;
+	padding: 0;
+}
+
+.name {
+	padding-left: 0;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	TEXT-ALIGN: left;
+	line-height: 150%;
+}
+
+#chess {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	-webkit-focus-ring-color: rgba(0, 0, 0, 0) !important;
+	outline: none !important;
+}
+
+.bn_box input {
+	background: url(../images/img_flash/chess_bt.png);
+	width: 101px;
+	height: 38px;
+	border: 0;
+	font-weight: bold;
+	margin-bottom: 15px;
+	font-family: "微软雅黑";
+}
+
+.bn_box input:hover {
+	cursor: pointer;
+	background: #E3B754;
+}
+
+.bn_box input:active {
+	cursor: pointer;
+	background: #C7893C;
+}
+/*
+.black {
+	margin-top: 50px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+
+.red {
+	margin-top: 200px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+
+.chess_right {
+	float: left;
+	width: 180px;
+	height: 420px;
+	display: block
+}
+
+.chess_tit {
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+
+.chess_bottom {
+	
+}
+*/
+.bill_box {
+	height: 326px;
+	width: 180px;
+	overflow: auto;
+	margin: 60px 0 0 32px;
+}
+
+.bill_box li {
+	cursor: pointer;
+	text-align: left;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+
+.bill_box li:hover {
+	cursor: pointer;
+	background: #C6A577;
+}
+
+.bill_box li:active {
+	cursor: pointer;
+	background: #fff;
+}
+
+#billList {
+	margin-top: 20px
+}
+
+.bn_box {
+	display: block;
+	margin: 10px;
+}
+
+.time {
+	margin: -150px 0 0 370px;
+	position: relative;
+}
+
+.time ul {
+	width: 80px;
+	background: #E3B754;
+	margin-top: 2px;
+	border: 1px solid #E3B754;
+	position: absolute;
+	display: none
+}
+
+.time ul li {
+	height: 24px;
+	line-height: 24px;
+	text-indent: 10px;
+	list-style-type: none;
+}
+
+.time ul li a {
+	display: block;
+	height: 24px;
+	color: #807a62;
+	text-decoration: none
+}
+
+.time ul li a:hover {
+	background: #C7893C;
+	color: #369
+}

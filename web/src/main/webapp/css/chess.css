@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+html {
+	overflow: hidden;
+}
+
+body {
+	background: ../images/img_chess/bg.jpg;
+	font-size: 12px;
+	line-height: 150%;
+}
+/* 改变系统默认的下拉框样式 */
+select {
+	border: 1px solid #DDDDDD;
+	padding: 2px 25px 3px 3px; /* 为下拉小箭头留出一点位置，避免被文字覆盖 */
+	appearance: none; /* 将默认的select选择框样式清除 */
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url("/images/arrow.png") no-repeat scroll right center transparent;
+	cursor: pointer;
+}
+select::-ms-expand {
+	display: none;
+}
+#chess {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	-webkit-focus-ring-color: rgba(0, 0, 0, 0) !important;
+	outline: none !important;
+}
+
+.btn {
+	background: url(../images/img_chess/buttonbg.png);
+	width: 90px;
+	height: 30px;
+	border: none;
+	font-weight: bold;
+	color: white;
+}
+.box {
+	margin: 0 auto;
+	width: 580px;
+	position: relative;
+}
+
+.chess_left {
+	float: left;
+	text-align: center
+}
+
+.chess_right {
+	float: left;
+	display: block
+}
+
+.move_info {
+	float: left;
+	margin-top: 20px
+}
+
+.bill_box {
+	height: 320px;
+	width: 80px;
+	overflow: auto;
+}
+
+.bill_box li {
+	cursor: pointer;
+	text-align: left
+}
+
+.bill_box li:hover {
+	cursor: pointer;
+	background: #C6A577;
+}
+
+.bill_box li:active {
+	cursor: pointer;
+	background: #fff;
+}
+
+#billList {
+	margin-top: 20px
+}
+
+.bn_box {
+	display: block;
+}

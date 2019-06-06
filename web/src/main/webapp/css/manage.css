@@ -1,0 +1,308 @@
+/* By yxxcrtd@gmail.com@2015 */
+@CHARSET "UTF-8";
+/**
+	manage.css 包含：
+	1，公共部分；
+	2，Top样式；
+	3，左边的菜单样式；
+	4，主体中的表格样式等。
+*/
+
+/* 整站页面样式 */
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	color: #12457C; /* 整站的字体颜色 */
+	background-color: #FFFFFF;
+	font: 12px/1.5 tahoma, arial, 宋体, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* 图片无边框 */
+a, img {
+	border: none;
+}
+/* 改变系统默认的下拉框样式 */
+select {
+	border: 1px solid #DDDDDD;
+	padding: 2px 25px 3px 3px; /* 为下拉小箭头留出一点位置，避免被文字覆盖 */
+	appearance: none; /* 将默认的select选择框样式清除 */
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url("/images/arrow.png") no-repeat scroll right center transparent;
+	cursor: pointer;
+}
+select::-ms-expand {
+	display: none;
+}
+/* 兼容首页上新闻em标签 */
+em {
+	font-style: normal;
+}
+
+/* 去除超连接点击之后的虚线框 */
+a {
+	outline: none; /* For Firefox */
+	blr: expression(this.onFocus = this.blur ()); /* For IE & Opera*/
+	text-decoration: none;
+}
+/* 超连接获得焦点时无轮廓 */
+a:focus {
+	-moz-outline-style: none; /* For Firefox */
+}
+/* 超连接 样式 */
+a:link {
+/* 	color: #12457C; */
+	text-decoration: none;
+}
+/* 鼠标移上的样式 */
+a:hover {
+	color: #FFOOOO;
+	text-decoration: none;
+}
+/* 超连接激活时的样式 */
+a:active {
+	color: #FFOOOO;
+}
+/* 访问过后的样式 */
+a:visited {
+	color: #FFOOOO;
+	text-decoration: none;
+}
+
+/* Top 样式 */
+div#top {
+	height: 50px;
+	color: #00FF00;
+	background-color: #242424;
+}
+div#logo {
+	width: 170px;
+	height: 50px;
+	float: left;
+}
+div#welcome {
+	float: left;
+	font-size: 20px;
+	padding-left: 30px;
+	height: 50px;
+	line-height: 50px;
+}
+div#profile {
+	float: right;
+	margin-right: 20px;
+	font-size: 14px;
+	height: 50px;
+	line-height: 50px;
+}
+
+/* 菜单样式 */
+/* 左侧菜单的宽度 */
+div#menu {
+	margin: 0;
+	padding: 0;
+	width: 170px;
+}
+#firstMenu {
+	border-top: 1px solid #666666;
+}
+
+/* 所有的  li 与 上边距的距离 */
+li {
+	border-top: 1px solid #242424;
+}
+/* 父菜单的超连接样式 */
+.subMenu {
+	border-bottom: 1px solid #323641;
+	font-size: 14px;
+}
+/* 父菜单的超连接样式 */
+ul.menu li a {
+	background: #242424;
+	color: #D6DAE6;
+	padding: 8px 6px 7px 23px;
+	height: 25px;
+	line-height: 25px;
+	background-image: url("../images/menu_plus.gif"); /* + */
+	background-repeat: no-repeat; /* 背景图片不重复 */
+	background-position: 90% center; /* 0代表横坐标，center代表纵坐标 */
+}
+/* 子菜单的超连接样式 */
+ul.menu li ul li a {
+	background: #323641; /* 背景颜色 */
+	color: #D6DAE6; /* 字体颜色 */
+	padding-left: 25px;
+	font-size: 13px;
+}
+/* 鼠标移到子菜单上的超连接样式 */
+ul.menu li ul li a:hover {
+	color: #C2DB1F !important; /* 字体颜色 */
+	border-left: 5px #C2DB1F solid;
+	padding-left: 20px;
+}
+
+/* 超链接按钮样式 */
+.button {
+	font-size: 13px;
+	padding: 3px 20px 4px 20px;
+}
+.button1 {
+	font-size: 16px;
+	padding: 5px 20px 6px 20px;
+}
+.button, .button1 {
+	color: #FFFFFF;
+	background-color: #A5CE4E;
+	/* 以下是兼顾按钮的样式 */
+	border: 0;
+	cursor: pointer;
+	-moz-border-radius: 3px; /* Firefox 1+ */
+	-webkit-border-radius: 3px; /* Chrome/Chromium, Safri 3.0+ */
+	border-radius: 3px; /* IE9, Opera 10.5+ */
+}
+.label, div#operation {
+	padding: 12px 0 0 0;
+}
+/* 红色字体 */
+.red {
+	color: #FF0000;
+}
+/* 分页样式 */
+div#pageNav {
+	float: right;
+}
+
+/* 文本输入框的样式（默认） */
+.input {
+	width: 300px;
+}
+/* 文本输入框的样式（135px） */
+.input135 {
+	width: 135px;
+}
+/* 文本输入框的样式（160px） */
+.input160 {
+	width: 160px;
+}
+/* 文本输入框的样式（200px） */
+.input200 {
+	width: 200px;
+}
+/* 文本输入框的样式（500px） */
+.input500 {
+	width: 500px;
+}
+/* 文本输入框的样式（872px） */
+.input872 {
+	width: 872px;
+}
+.input, .input135, .input160, .input200, .input500, .input872 {
+	color: #797979;
+	border: 1px solid #DDDDDD;
+	font-family: Arial, Verdana;
+	padding: 6px;
+	font-size: 12px;
+}
+.checkbox {
+	margin-bottom: 3px;
+	vertical-align: middle;
+}
+div#mainTop {
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	width: 100%;
+}
+span#mainTitle {
+	padding-left: 30px;
+}
+#tips {
+	color: #FF0000;
+	padding-left: 20px;
+}
+span#new {
+	float: right;
+	padding-right: 20px;
+}
+div#mainRight {
+	top: 0;
+	right: 0;
+}
+div#mainLeft, div#mainRight {
+	top: 0;
+	position: absolute;
+	width: 20px;
+	height: 100%;
+}
+div#mainCenter {
+	padding: 20px 20px 30px;
+	background-color: #FFFFFF;
+}
+div#mainTop, div#mainMain {/* , div#mainLeft, div#mainRight */
+	background-color: #D6DAE6;
+}
+
+/* 表格上面的查询 */
+div#search {
+	height: 25px;
+	width: 100%;
+	margin: 10px auto;
+}
+/* 每个查询条件的右边距离 */
+.condition {
+	padding-right: 10px;
+}
+
+/* 表格样式 */
+table {
+	text-align: center;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+/* 表格头部的背景样式 */
+#thead td {
+	height: 30px;
+}
+/* 设置表格中tr的高度 */
+table tr {
+	height: 30px;
+}
+/* 设置表格中td的边框 */
+table td {
+	border: 1px solid #DDDDDD;
+}
+/* 设置表格中所有a标签的超连接样式 */
+table a {
+	color: #0000FF;
+	text-decoration: underline;
+}
+/* 设置表格中数据项居左显示 */
+table .left {
+	text-align: left;
+	padding-left: 10px;
+}
+/* 定制的td边框为0 */
+table .left1 {
+	border: 0;
+	text-align: left;
+	padding-left: 20px;
+}
+/* 设置表格中数据项居右显示 */
+table .right {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.star {
+	color: #FF0000;
+	font-size: 16px;
+	vertical-align: middle;
+	padding-top: 7px;
+	height: 15px;
+}

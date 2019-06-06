@@ -1,0 +1,41 @@
+			<div class="tit c pr">
+				<div class="nav c pa">
+					<a class="on" href="javascript:;">德州扑克</a> <a href="javascript:;">斗地主</a>
+					<a href="javascript:;">麻将</a> <a href="javascript:;">棋类</a> <a
+						href="javascript:changeTutorial();">其他</a>
+				</div>
+				<a class="btn-more sp pa" href="/upload/tutorial_list.html" target="_blank">查看更多</a>
+			</div>
+			<ul class="ul-tutorial c mc" style="display: block;">
+							<li class="headline pr"><a href="/upload/tutorial10.html" target="_blank"><em>新的教程</em></a></li>
+							<li><a class="fl" href="/upload/tutorial8.html" target="_blank">嘴阀</a><span class="fr">11/28</span></li>
+							<li><a class="fl" href="/upload/tutorial5.html" target="_blank">无标题</a><span class="fr">11/28</span></li>
+							<li><a class="fl" href="/upload/tutorial2.html" target="_blank">教程2号不显示</a><span class="fr">11/27</span></li>
+			</ul>
+			<ul class="ul-tutorial c mc">
+							<li class="headline pr"><a href="/upload/tutorial3.html" target="_blank"><em>斗地主教程</em></a></li>
+			</ul>
+			<ul class="ul-tutorial c mc">
+			</ul>
+			<ul class="ul-tutorial c mc">
+							<li class="headline pr"><a href="/upload/tutorial6.html" target="_blank"><em>棋类教程</em></a></li>
+							<li><a class="fl" href="/upload/tutorial4.html" target="_blank">隐藏的江城</a><span class="fr">11/28</span></li>
+			</ul>
+			<ul class="ul-tutorial c mc">
+							<li class="headline pr"><a href="/upload/tutorial7.html" target="_blank"><em>其他教程</em></a></li>
+			</ul>
+<script type="text/javascript">
+<!--
+$(function() {
+	$("#index_match").load("/upload/index_match.html");
+});
+$(".box-news .nav a").each(function(i) {
+	$(this).click(function() {
+		$(".box-news .nav a").removeClass("on");
+		$(".box-news .nav a").eq(i).addClass("on");
+		$(".ul-news").hide();
+		$(".ul-news").eq(i).show();
+	});
+});
+//-->
+</script>

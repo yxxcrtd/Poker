@@ -1,0 +1,124 @@
+<div class="box-video">
+	<div class="container">
+		<div class="tit pr">
+			精彩视频
+			<p class="nav pa">
+				<a class="on" href="javascript:;">赛事直播</a>
+				<a href="javascript:;">赛事回放</a>
+				<a href="javascript:;">专题栏目</a>
+			</p>
+		</div>
+		<ul class="ul-video c" style="display: block;">
+								<li>
+						<a href="/upload/video22.html" target="_blank"><img width="235" height="170" src="/upload/20151202223500022.png" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>12月2日的赛事直播</em>
+							12月2日的赛事直播
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video2.html" target="_blank"><img width="235" height="170" src="/upload/20151101125138656.jpg" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>2016世界杯</em>
+							世界足球杯世界足球杯世界足球杯世界足球杯世界足球杯世界足球杯世界足球杯世界足球杯世界足球杯世界足球杯世界
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video1.html" target="_blank"><img width="235" height="170" src="/upload/20151101124931279.jpg" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>赛事直播</em>
+							赛事直播
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video4.html" target="_blank"><img width="235" height="170" src="/upload/20151101125238156.jpg" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>赛事直播4</em>
+							赛事直播4
+						</p>
+					</li>
+		</ul>
+		<ul class="ul-video c">
+					<li>
+						<a href="/upload/video6.html" target="_blank"><img width="235" height="170" src="/upload/20151101220028038.jpg" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>赛事回放1</em>
+							赛事回放1赛事回放1赛事回放1
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video9.html" target="_blank"><img width="235" height="170" src="/upload/20151101221339351.png" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>赛事回放4</em>
+							赛事回放2赛事回放2赛事回放2赛事回放2赛事回放2赛事回放2赛事回放2
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video8.html" target="_blank"><img width="235" height="170" src="/upload/20151101221209683.png" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>赛事回放2</em>
+							赛事回放2赛事回放2赛事回放2赛事回放2赛事回放2赛事回放2赛事回放2
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video3.html" target="_blank"><img width="235" height="170" src="/upload/20151101125220653.jpg" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>赛事直播3</em>
+							赛事直播3
+						</p>
+					</li>
+		</ul>
+		<ul class="ul-video c">
+					<li>
+						<a href="/upload/video7.html" target="_blank"><img width="235" height="170" src="/upload/20151101220538637.jpg" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>专题栏目1</em>
+							专题栏目1
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video10.html" target="_blank"><img width="235" height="170" src="/upload/20151101221455130.png" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>专题栏目2</em>
+							专题栏目2222
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video11.html" target="_blank"><img width="235" height="170" src="/upload/20151101221528280.png" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>专题栏目 3</em>
+							专题栏目 3
+						</p>
+					</li>
+					<li>
+						<a href="/upload/video12.html" target="_blank"><img width="235" height="170" src="/upload/20151101221550982.png" /><i class="pa" style="width: 235px; background-image: url('../images/video2.png');"></i></a>
+						<p>
+							<em>专题栏目 4</em>
+							专题栏目4
+						</p>
+					</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+<!--
+// 精彩视频
+$(".ul-video li").each(function(i) {
+	if (i % 3 == 0) {
+		$(".ul-video li").eq(i - 1).removeClass("fix");
+	}
+	if (i % 4 == 0) {
+		$(".ul-video li").eq(i - 1).addClass("fix");
+	}
+});
+// 精彩视频切换
+$(".box-video .nav a,.box-video2 .nav a").each(function(i) {
+	$(this).click(function() {
+		$(".box-video .nav a, .box-video2 .nav a").removeClass("on");
+		$(".box-video .nav a, .box-video2 .nav a").eq(i).addClass("on");
+		$(".ul-video, .box-video2 .ul-video").hide();
+		$(".ul-video, .box-video2 .ul-video").eq(i).show();
+	});
+});
+//-->
+</script>

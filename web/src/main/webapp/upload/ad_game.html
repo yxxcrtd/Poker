@@ -1,0 +1,35 @@
+<div class="outer pa">
+				<a href="http://game111.com" target="_blank">
+				<img width="440" height="320" src="/upload/20151115233833097.jpg" />
+			</a>
+			<a href="http://www.game22.com" target="_blank">
+				<img width="440" height="320" src="/upload/20151115233910252.jpg" />
+			</a>
+</div>
+<a class="arrow left sp pa" href="javascript:;"></a> 
+<a class="arrow right sp pa" href="javascript:;"></a>
+<script type="text/javascript">
+	var gamePicI = 0;
+	var gamePicW = $(".game-pic .outer a").width();
+	var gamePicL = $(".game-pic .outer a").length;
+	$(".game-pic .outer").css("width", gamePicW * gamePicW + "px");
+	$(".game-pic .left").click(function() {
+		gamePicI--;
+		if (gamePicI < 0) {
+			gamePicI = 0;
+		}
+		gamePicGo();
+	});
+	$(".game-pic .right").click(function() {
+		gamePicI++;
+		if (gamePicI > gamePicL - 1) {
+			gamePicI = gamePicL - 1;
+		}
+		gamePicGo();
+	});
+	function gamePicGo() {
+	$(".game-pic .outer").stop(true).animate({
+		left : '-' + gamePicI * gamePicW + 'px'
+	});
+}
+</script>

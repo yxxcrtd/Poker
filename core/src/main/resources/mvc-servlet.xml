@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+	<context:component-scan base-package="cn.com.galaxymaster.controller" />
+	<context:component-scan base-package="cn.com.galaxymaster.service.impl" />
+	<context:component-scan base-package="cn.com.galaxymaster.dao.impl" />
+	<mvc:annotation-driven validator="validator" />
+	<context:property-placeholder location="classpath:config.properties" />
+	
+	<!--设置登录拦截器 -->  
+    <mvc:interceptors>  
+        <mvc:interceptor>  
+            <mvc:mapping path="/manage/**" />
+            <bean class="cn.com.galaxymaster.interceptor.LoginInterceptor" />  
+        </mvc:interceptor>  
+    </mvc:interceptors>
+	
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource" 
+		p:basenames="classpath:i18n" 
+		p:useCodeAsDefaultMessage="false" 
+		p:defaultEncoding="UTF-8" 
+		p:cacheSeconds="60" />
+	
+	<bean id="freemarkerConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location" value="classpath:freemarker.properties" />
+	</bean>
+
+	<bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer" 
+		p:templateLoaderPath="/WEB-INF/ftl/" 
+		p:defaultEncoding="UTF-8">
+		<property name="freemarkerSettings" ref="freemarkerConfiguration" />
+		<property name="freemarkerVariables">
+			<map>
+				<entry key="xml_escape" value-ref="fmXmlEscape" />
+			</map>
+		</property>
+	</bean>
+	<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape" />
+	
+	<!--根据 controller 返回的字符串 找到viewResolver -->
+	<bean id="beanNameViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<property name="order" value="2"></property>
+	</bean>
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver" 
+		p:cache="true"
+		p:order="1" 
+		p:prefix="" 
+		p:suffix=".ftl" 
+		p:contentType="text/html; charset=UTF-8" 
+		p:requestContextAttribute="request" />
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+		p:defaultEncoding="UTF-8" 
+		p:maxUploadSize="10485760" 
+		p:maxInMemorySize="40960" />
+	
+	<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">Error</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
